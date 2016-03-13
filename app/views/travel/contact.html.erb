@@ -1,0 +1,37 @@
+<%= content_for :head do %>
+	<div class="col-lg-9">
+		<h3 class="text-primary"><strong>Cont&aacute;ctenos</strong></h3>
+	</div>
+<% end %>
+
+<div class="col-lg-9">
+	<div class="col-lg-6">
+		<div class="panel panel-info">
+	  		<div class="panel-heading">
+	  			<%= form_tag("/get", method: "get") do %>
+					<%= label_tag(:name, "Name:") %>
+					<div> <%= text_field_tag(:q) %></div>
+				
+					<%= label_tag(:mail, "E-Mail:") %>
+					<div> <%= text_field_tag(:q) %></div>
+					
+					<%= label_tag(:comment, "Message:") %>
+					<div> <%= text_field_tag(:q) %></div>
+					<p></p>
+					<div><%= submit_tag("Enviar") %></div>	
+				<% end %>
+		
+	  		</div>
+		</div>  	
+	</div>
+	<div class="col-lg-3">
+		<div id="maps">
+	    	<%= render 'map' %> 
+		</div>
+	</div>
+	
+	
+</div>
+
+
+
